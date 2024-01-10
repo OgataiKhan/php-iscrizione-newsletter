@@ -1,7 +1,5 @@
 <?php
-$email_input = $_GET['input-email'] ?? '';
-
-$is_email = fn ($str) => str_contains($str, '.') && str_contains($str, '@');
+require_once __DIR__ . '/functions.php';
 ?>
 
 <!DOCTYPE html>
