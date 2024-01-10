@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$registered_email = $_SESSION['email_input']
+$registered_email = $_SESSION['email_input'];
 ?>
 
 <!DOCTYPE html>
