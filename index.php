@@ -1,3 +1,9 @@
+<?php
+$email_input = $_GET['input-email'] ?? '';
+
+$is_email = fn ($str) => str_contains($str, '.') && str_contains($str, '@');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,12 +24,13 @@
   </header>
   <main>
     <div class="container">
+      <!-- Input form -->
       <div class="row justify-content-md-center">
         <div class="col-6">
-          <form action="index.php" method="GET" novalidate>
+          <form class="mb-3" action="index.php" method="GET" novalidate>
             <div class="mb-3">
               <label for="input-email" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="input-email" placeholder="name@example.com">
+              <input type="email" name="input-email" class="form-control" id="input-email" placeholder="name@example.com">
             </div>
             <div class="d-flex justify-content-center">
               <button type="submit" class="btn btn-primary">Filter</button>
@@ -31,6 +38,22 @@
           </form>
         </div>
       </div>
+      <!-- /Input form -->
+      <!-- Alerts -->
+      <div class="row justify-content-md-center">
+        <div class="col-6">
+          <?php if (!empty($email_input) && $is_email($email_input)) : ?>
+            <div class="alert alert-success" role="alert">
+              Success!
+            </div>
+          <?php elseif (!empty($email_input)) : ?>
+            <div class="alert alert-danger" role="alert">
+              Please enter a valid email address.
+            </div>
+          <?php endif; ?>
+        </div>
+      </div>
+      <!-- /Alerts -->
     </div>
   </main>
 </body>
