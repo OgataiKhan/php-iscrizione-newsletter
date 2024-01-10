@@ -11,7 +11,28 @@
 </head>
 
 <body>
-
+  <header class="py-5">
+    <div class="container">
+      <h1 class="text-center">PHP Iscrizione Newsletter</h1>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-6">
+          <form action="index.php" method="GET" novalidate>
+            <div class="mb-3">
+              <label for="input-email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="input-email" placeholder="name@example.com">
+            </div>
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-primary">Filter</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>
