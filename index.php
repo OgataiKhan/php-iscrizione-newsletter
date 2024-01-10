@@ -31,7 +31,7 @@ require_once __DIR__ . '/functions.php';
               <input type="email" name="input-email" class="form-control" id="input-email" placeholder="name@example.com">
             </div>
             <div class="d-flex justify-content-center">
-              <button type="submit" class="btn btn-primary">Filter</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
             </div>
           </form>
         </div>
