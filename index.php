@@ -40,9 +40,9 @@ require_once __DIR__ . '/functions.php';
       <!-- Alerts -->
       <div class="row justify-content-md-center">
         <div class="col-6">
-          <div role="alert" class="alert alert-<?php if (!empty($email_input) && $is_email($email_input)) : ?>success">
+          <div role="alert" class="alert alert-<?php if (!empty($_SESSION['email_input']) && $is_email($_SESSION['email_input'])) : ?>success">
             Success!
-            <?php elseif (!empty($email_input)) : ?>danger">
+            <?php elseif (!empty($_SESSION['email_input'])) : ?>danger">
             Please enter a valid email address.
           <?php endif; ?>
           </div>
